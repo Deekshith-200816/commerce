@@ -1,21 +1,19 @@
-import { Carousel } from 'components/carousel';
-import { ThreeItemGrid } from 'components/grid/three-items';
-import Footer from 'components/layout/footer';
+import Logo from '../components/ui/Logo'
 
-export const metadata = {
-  description:
-    'High-performance ecommerce store built with Next.js, Vercel, and Shopify.',
-  openGraph: {
-    type: 'website'
-  }
-};
-
-export default function HomePage() {
+export default function Home() {
   return (
-    <>
-      <ThreeItemGrid />
-      <Carousel />
-      <Footer />
-    </>
-  );
+    <main className="container mx-auto p-4">
+      <header className="flex items-center space-x-4 py-6">
+        <Logo />
+        <h1 className="text-4xl font-extrabold">Welcome to Trenza</h1>
+      </header>
+
+      <section className="mt-10">
+        <p className="text-lg text-gray-600">
+          Discover curated fashion collections with AI-generated models.
+        </p>
+        {/* Add more homepage content here */}
+      </section>
+    </main>
+  )
 }
